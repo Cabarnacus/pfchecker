@@ -26,17 +26,17 @@ With a text editor change the following in gatewaymonitor.py:
 
 Save and exit. 
 
-In PFSense use Diagnostics > Command Prompt > Upload File to upload the two files in pfsense folder to the /root directory. Then gain shell access to pfsense (option 8) and in the terminal run the following:
+In PFSense use Diagnostics > Command Prompt > Upload File to upload the two files in pfsense folder to the /root directory. Then gain shell access to pfsense (option 8) and in the terminal run the following from the root home directory `/root`:
 
 `/usr/local/bin/python3.8 -m ensurepip` to install pip
 
-`/usr/local/bin/python3.8 -m pip --user -r /requirements.txt`
+`/usr/local/bin/python3.8 -m pip install --user -r requirements.txt`
 
-`mv /root/gatewaymonitor.sh /usr/local/etc/rc.d/gatewaymonitor.sh`
+`mv ./gatewaymonitor.sh /usr/local/etc/rc.d/gatewaymonitor.sh`
 
 `chmod +x /usr/local/etc/rc.d/gatewaymonitor.sh`
 
-`chmod +x /root/gatewaymonitor.py`
+`chmod +x ./gatewaymonitor.py`
 
 `touch /etc/rc.conf.local && echo "gwmonitor_enable=\"YES\"" >> /etc/rc.conf.local`
 
