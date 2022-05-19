@@ -1,4 +1,4 @@
-##Gateway monitor and email alert service for PFSense
+#Gateway monitor and email alert service for PFSense
 
 Here is a basic tool I have written in Python that runs as a service on PFSense (FreeBSD). This is pretty simple to follow and has probably been poorly written and has gone against best practices, but it works for my needs and if you can do something with it then be my guest.
 
@@ -13,10 +13,15 @@ With a text editor change the following in gatewaymonitor.py:
 GATEWAY = "LTEGW" to the name of the gateway in PFSense that you want to monitor. Maybe in the future I will change this to be a list of gateways and a simple for loop would monitor more than one. But for now it only does one.
 
 port = 587  # For starttls (Change to whatever you need for your email provider)
+
 smtp_server = "smtp.office365.com" #Change to gmail or other smtp server of your choice
+
 login_email = "xxx@email.com" #Login email for mailbox
+
 sender_email = "xxy@email.com" #Sender email this is usually as above but can be another delegated mailbox
+
 receiver_email = "xxz@email.com" #Wherever you want the offline alerts to go to.
+
 password = "password" #Mailbox password as a plain text string. This is not the most secure method, I know, but if you have someone logged into your firewall and reading through this script then you have bigger issues than this.
 
 Save and exit. 
