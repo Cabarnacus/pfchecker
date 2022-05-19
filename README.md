@@ -1,4 +1,4 @@
-#Gateway monitor and email alert service for PFSense
+# Gateway monitor and email alert service for PFSense
 
 Here is a basic tool I have written in Python that runs as a service on PFSense (FreeBSD). This is pretty simple to follow and has probably been poorly written and has gone against best practices, but it works for my needs and if you can do something with it then be my guest.
 
