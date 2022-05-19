@@ -6,7 +6,7 @@ Simply it uses a built in php tool in PFSense that provides metrics on all confi
 
 Obviously to sent the email the firewall needs to be configured to fall back to another gateway in the event the monitored gateway is marked as down. This is acheived through the use of setting gateway groups as the default gateway in System > Routing > Gateways in PFSense.
 
-Basic setup is as follows:
+## Basic setup
 
 With a text editor change the following in gatewaymonitor.py: 
 
